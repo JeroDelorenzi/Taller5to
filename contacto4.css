@@ -1,0 +1,43 @@
+body{
+    font-family: 'Open Sans', sans-serif; 
+}
+.navbar{
+    background: #407DDA;
+    border-bottom: 1px solid #f4f4f4;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
+}
+.navbar-nav a{
+    font-size: 18px;
+    color: white;
+    justify-content: space-between;
+}
+
+.contacto{
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: .4s;
+    border-radius: 3px;
+}
+
+.navbar-nav a:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: .4s;
+    border-radius: 3px;
+}
+
+.navbar-brand{
+    font-size: 25px;
+    padding: 0 30px;
+    font-weight: bold;
+}
+
+@media (max-width :991px){
+*{
+margin-right: 0;
+}
+}
+
+@media (max-width: 776px){
+    *{
+    margin-right: 0;
+    }
+    }

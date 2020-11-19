@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Taller 5to año 2043</title>
+        <!--BOOTSTRAP-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <!--CSS-->
+        <link rel="stylesheet" href="estilo4.css">
+        <!--Fuente-->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        
+        <!--NAVBAR-->
+    
+        <nav id="menu" class="navbar navbar-expand-lg navbar-light navbar-toggleable-sm fixed-top">
+            <label class="navbar-brand" style="color: #ffffff">Colegio San José</label>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <div class="navbar-nav ml-auto p-2" style="color: #ffffff;">
+                <a class="nav-item nav-link active" href="#" style="color: #ffffff;">Inicio</a>&nbsp&nbsp
+                <a class="nav-item nav-link active" href="#proyecto" style="color: #ffffff;">Proyecto</a>&nbsp&nbsp
+                <a class="nav-item nav-link active" href="#arduino" style="color: #ffffff;">Arduino</a>&nbsp&nbsp
+                <a class="nav-item nav-link active" href="#coleg" style="color: #ffffff;">Institución</a>&nbsp&nbsp
+                <a class="nav-item nav-link active" href="#team" style="color: #ffffff;">¿Quienes somos?</a>&nbsp&nbsp
+                <div class="contacto">
+                    <a class="nav-item nav-link active" href="index4.html" style="color: #ffffff;">Contacto</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+      
+        <!--CAROUSEL-->  
+      
+        <div id="slides" class="carousel slide" data-ride="carousel" data-interval="4000">
+            <ul class="carousel-indicators">
+                <li data-target="#slides" data-slide-to="0" class="active"></li>
+                <li data-target="#slides" data-slide-to="1"></li>
+                <li data-target="#slides" data-slide-to="2"></li>
+            </ul>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/img2.jpg" alt="First slide" class="imagen">
+                    <div class="carousel-caption">
+                        <h1 class="display-2">
+                            Proyecto
+                        </h1>
+                        <h3>
+                            Un acercamiento al proyecto
+                        </h3>
+                    <a href="#proyecto">
+                        <button type="button" class="btn btn-outline-light btn-lg" >
+                            Ver más
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-compact-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
+                              </svg>
+                        </button>
+                    </a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/colegi.jpg" alt="Second slide" class="imagen">
+                    <div class="carousel-caption">
+                        <h1 class="display-2">
+                            Institución
+                        </h1>
+                        <h3>
+                            Resumen de nuestra historia
+                        </h3>
+                    <a href="#coleg">
+                        <button type="button" class="btn btn-outline-light btn-lg">
+                            Ver más
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-compact-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
+                              </svg>
+                        </button>
+                    </a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/img1.jpg" alt="Third slide" class="imagen">
+                    <div class="carousel-caption" >
+                            <h1 class="display-2">
+                                Arduino
+                            </h1>
+                            <h3>
+                                Descripción sobre esta plaqueta
+                            </h3>
+                    <a href="#arduino">
+                            <button type="button" class="btn btn-outline-light btn-lg">
+                            Ver más
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-compact-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
+                              </svg>
+                        </button>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        
+    <!--PRESENTACION-->
+
+        <section class="about">
+            <div class="container">
+                <br><br>
+                <div>
+                    <h3 class="h3">Sitio Web proyecto Arduino</h3>
+                    <p>Navegando por esta página y el material que se le facilita en la misma usted encontrará contenido detallado sobre nuestro proyecto, como fue llevado a cabo, los materiales que utilizamos para realizarlo, las piedras en el camino y, en general, nuestra experiencia personal trabajando con Arduino.</p>
+                </div>
+
+                <hr class="my-5">
+                <div class="row justify-content-center text-center mt-5">
+                    <div class="col-md-4">
+                        <i class="fas fa-glasses fa-3x mb-2"></i>
+                        <h3>Proyecto</h3>
+                        <p>Una riñonera especializada para no videntes, gracias a la plaqueta programable "Arduino" conseguimos reemplazar el baston blanco para que los que no ven vayan con las manos libres.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-school fa-3x mb-2"></i>
+                        <h3>Institucion</h3>
+                        <p>El colegio San Jose y los profesores Eber Fior y German Fortunato nos ayudaron a llevar a cabo el proyecto integrador para la materia de TALLER. </p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-user-friends fa-3x mb-2"></i>
+                        <h3>¿Quienes somos?</h3>
+                        <p>Somos Jerónimo Delorenzi y Ezequiel Rueda, dos alumnos de la Tecnica 2043 del colegio San Jose que cursan el 5to año. En conjunto llevamos adelante el proyecto. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+   
+    <!--SEPARACION-->
+    <br><br>
+    <div class="fondo1" id="proyecto">
+        <h2 class=display-4>PROYECTO</h2>
+    </div>
+
+    <!--PROYECTO-->
+
+    <section  class="proyecto">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-md-6 mt-5 mt-md-0">
+                    <h4 class="h4">Riñonera especializada para no videntes</h4>
+                    <p>El proyecto consiste en una riñonera con tres sensores ultrasónicos conectados a Arduino y programados de forma tal que, al tener un obstáculo o bache a una distancia determinada y configurable según el usuario, le indique al mismo mediante sonidos trasmitidos por un auricular, o a través de vibraciones producidas por un motor si la distancia entre él y el obstáculo en cuestión disminuye. </p>
+                </div>
+                <div class="col-md-6 mt-5 mt-md-0">
+                    <h4 class="h4  font-italic">Objetivo principal</h4>
+                    <p>El objetivo principal es remplazar el bastón blanco con el que se guían los ciegos. otorgándoles la posibilidad de andar sin chocarse ni entorpecerse con los  obstáculos que le disponga el camino. </p>
+                    <h4 class="h4  font-italic">Justificación del proyecto</h4>
+                    <p>Buscamos darle a los no videntes la posibilidad de moverse sabiendo si un objeto se cruza en su camino, teniendo las manos libres. </p>
+                </div>
+            </div>
+              <br>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LILav0nO_y0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <hr class="my-5">
+
+            <div class="row mt-5 ">
+                <div class="col-md-6 mt-5 mt-md-0">
+                    <h3 class="h3">Circuito y Materiales</h3>
+                    <ul>
+                        <li>Riñonera</li> 
+                        <li>Interruptor.</li> 
+                        <li>Arduino UNO.</li> 
+                        <li>Sensores ultrasónicos x3.</li> 
+                        <li>Memoria micro SD.</li> 
+                        <li>Plaqueta.</li> 
+                        <li>Módulo lector micro SD.</li> 
+                        <li>Resistencias 10 k.</li> 
+                        <li>Jack hembra 3,5.</li> 
+                        <li>Motor vibrador.</li> 
+                        <li>Cables.</li> 
+                    </ul>
+    
+                    <p> El costo total fue de $3000.</p>
+    
+                    </div>
+                <div class="col-md-6">
+                    <img src="img/Circo_bb.png" class="img-fluid">
+                </div>
+            </div>
+
+            <hr class="my-5">      
+                
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-1 mr-3">
+                            <i class="fas fa-exclamation-circle fa-2x"></i>
+                        </div>
+                        <div class="col-10">
+                            <h5 class="feature-title">Problemas</h5>
+                            <p>El primer inconveniente que se presentó fue la imposibilidad de conectar un módulo Bluetooth de Arduino a auriculares inalámbricos, ya que eso nos permitía disminuir los cables dentro de la riñonera. Otro inconveniente fue la necesidad de encontrar una riñonera que posea la suficiente firmeza para que los sensores se mantengan en su lugar a pesar de los movimientos del usuario.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 ">
+                    <div class="row">
+                        <div class="col-1 mr-3">
+                            <i class="fas fa-thumbs-up fa-2x"></i>
+                        </div>
+                        <div class="col-10">
+                            <h5 class="feature-title">Soluciones</h5>
+                            <p>El módulo Bluetooth fue finalmente descartado y optamos por buscar la manera de conectar los auriculares a un jack de 3,5mm, sin permitir que los cables se enrieden dentro de la riñonera. Esto fue posible modificando la ubicación del pulsador y el interruptor de encendido/apagado. Al final no encontramos una riñonera que cumpla con las características que buscábamos por lo que decidimos fabricar un modelo en cartón para el prototipo y una impresión 3D para el producto final.</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
+            <hr class="my-5">
+
+            <div class="container-fluid h-100"> 
+        		<div class="row w-100 align-items-center">
+        			<div class="col text-center">
+                    <a href="Codigo.txt" download="Codigo.txt">
+                        <button type="button" class="btn btn-outline-primary btn-lg">
+                            <i class="fa fa-code" style="color: #000"></i>  Descargá el código
+                        </button>
+                    </a>
+                        &nbsp&nbsp&nbsp&nbsp
+                    <a href="Proyecto_Integrador_Arduino.pdf" download="Proyecto_Integrador_Arduino.pdf">
+                        <button type="button" class="btn btn-outline-primary btn-lg" download="">
+                            <i class="fa fa-download" style="color: #000"></i>    Descargá el PDF               
+                        </button>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--SEPARACION-->
+
+    <div class="fondo2" id="arduino">
+        <h2 class=display-4>ARDUINO</h2>
+    </div>
+
+    <!--ARDUINO-->
+
+    <section  class="arduino">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="feature-block">
+                        <i class="fas fa-question fa-2x mb-2"></i>
+                        <h3>¿Qué es?</h3>
+                        <p> Arduino es una plataforma de hardware libre, basada en una placa con un microcontrolador y un entorno de desarrollo (software), diseñada para facilitar el uso de la electrónica en proyectos multidisciplinares. Arduino es una plataforma abierta que facilita la programación de un microcontrolador.</p>
+                    </div>
+                <div class="feature-block mt-5">
+                    <i class="fas fa-robot fa-2x mb-2"></i>
+                        <h3>¿Qué podés hacer?</h3>
+                        <p> Con Arduino puedes realizar proyectos de automatización industrial, domótica, herramienta de prototipado, plataforma de entrenamiento para aprendizaje de electrónica, tecnología para artistas, eficiencia energética, monitorización, adquisición de datos, DIY, aprendizaje de habilidades tecnológicas y programación, etc…</p>
+                    </div>
+                </div>
+                <div class="imagen col-md-4 device">
+                    <img src="img/Arduino.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-block">
+                        <i class="fas fa-info fa-2x mb-2"></i>
+                        <h3>Caracteristicas</h3>
+                        <ul class="list-unstyled">
+                           <li>Microcontrolador: ATmega328</li>
+                           <li>Voltaje de operación: 5V</li>
+                           <li>Pines de E/S digitales: 14 (de los cuales 6 proporcionan salida PWM)</li>
+                           <li>Pines de entrada analógica: 6</li>
+                           <li>Corriente DC por pin de E/S: 40 mA</li>
+                           <li>Corriente DC para 3.3V Pin: 50 mA</li>
+                           <li>Memoria Flash: 32 KB de los cuales 0,5 KB utilizados por el bootloader</li>
+                           <li>Velocidad de reloj: 16 MHz</li>
+                        </ul>
+                    </div>
+                <div class="feature-block mt-5">
+                        <i class="fas fa-history fa-2x mb-2"></i>
+                        <h3>Historia</h3>
+                        <p>La historía de Arduino comenzó como un proyecto de tesis de maestría  de Hernando Barragán y sus asesores Massio Banzi y Casey Reas. Su objetivo principal fue el crear una herramienta que fuera fácil de usar. El propósito de Arduino es el de poder ser usado por la mayoría de las personas, incluso sin tener un fuerte entrenamiento en programación y/o electrónica. </p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5" >
+
+            <div class="centrado1 row mt-5">
+                <div class="texto col-md-6 mt-5 mt-md-0">
+                    <h3 class="h3">Nuestra experiencia</h3>
+                    <p>A principio de este año nos encontrábamos con algo que para nosotros fue un verdadero reto, aprender a utilizar un dispositivo que solo conocíamos por el nombre.</p>
+                    <p>Luego de que los profesores nos comentaran el rumbo que tendría el año, nos embarcamos en la búsqueda de un proyecto de referencia, que cumpla con ciertas condiciones para que podamos llevar a cabo algo similar. Una vez encontrado debíamos comenzar la investigación que nos ayudaría a entender el funcionamiento y la programación de Arduino. Gracias a distintos materiales que fueron facilitados por los profesores, algunos que intercambiamos con nuestros compañeros y otros que investigamos por nuestra cuenta, y a los conocimientos previos que teníamos de otros lenguajes de programación (de los cuales Arduino toma bastantes comandos) pudimos comprender sin mayores inconvenientes como utilizar correctamente esta plaqueta programable. </p>
+                </div>
+                <div class="centrado2 col-md-6 mt-5 mt-md-0">
+                    <img src="img/proyect.jpg" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section >
+
+    
+    <!--SEPARACION-->
+
+    <div class="fondo3" id="coleg">
+        <h2 class=display-4>INSTITUCIÓN</h2>
+    </div>
+
+    <!--INSTITUCION-->
+
+    <section  class="coleg">
+        <div class="container">
+            <div>
+                <h4 class="h4">Nuestra historia</h4>La fecha de la fundación oficial del Colegio Salesiano “San José” es el 19 de febrero de 1890. La nueva obra salesiana se llamó originariamente Oratorio “San Luis”,  y contó aquel primer año con una escuela elemental de 150 externos y talleres de carpintería y zapatería. Con el nuevo siglo se decidió la compra del terreno que daba sobre la calle Independencia (actual Presidente Roca) y, luego, los demás. Hacia 1904, la Obra poseía casi toda la manzana.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 inst-img">
+                    <img src="img/aereo.png" class="imgcoleg" style="width: inherit;">
+                    <div> Vista aérea del Colegio San José</div>
+                </div>
+                <div class="col-md-6"><p class="parrafo">En el año 1922 el Gobierno provincial reconoció los títulos de “maestro” en las diversas especialidades de Artes y Oficios. En 1926 se inauguraba el grandioso edificio terminado. Pocos años después se erigió la parroquia de María Auxiliadora en una capilla que ya existía sobre calle Jujuy, aunque enseguida la construcción de la cripta sobre la calle Salta, con frente a Presidente Roca, bendecida el sábado 18 de octubre de 1929.</p>
+                <p>Durante la década de 1930 el Colegio “San José” llegará a albergar mil alumnos a la vez que se avanza incesantemente con la edificación en la manzana tradicional dePresidente Roca - Salta - España - Jujuy. Ya en el año 1948 funcionaban en la Obra las escuelas de tipografía, imprenta, litografía, encuadernación, fotograbados, fundición,herrería, ajuste, tornado, carpintería, escultura, decoración, orfebrería, cincelado, sastrería y zapatería. En este contexto, y en el año 1976, se crea la Escuela de Educación Técnica Nº 43 como un sector más del Colegio Salesiano San José. Presentaba una original oferta de capacitación laboral en cuatro años, tributaria de la tradición salesiana de formación en “artes y oficios” que a la vez no descuida la promoción integral de los jóvenes. Cada año decenas de adolescentes, la mayoría de ellos de contextos socio-económicos desfavorecidos, egresaban con el diploma de “expertos” en Carpintería, Mecánica, Electricidad y Artes Gráficas, lo cual configuraba una formación en oficios prácticamente única y altamente valorada en la ciudad de Rosario de aquel entonces.
+                </p></div>
+            </div>
+            <div class="row">
+                <div class="col-md-6"><p>Reforma educativa de la Ley Federal de Educación de la década de 1990 mediante, esta escuela de capacitación laboral debió convertirse en una secundaria técnica, la Escuela de Educación Secundaria Modalidad Técnico Profesional Particular Incorporada Nº 2043 “San José”. En paulatina adaptación a la normativa provincial que en la primera década de este siglo comenzó a aplicar el nuevo sistema nacional de educación técnico profesional, el establecimiento implementó los nuevos diseños curriculares y en 2016 se incorporó el sexto año. En definitiva, todo dentro del marco de la modalidad técnico profesional, la Escuela 2043 del Colegio Salesiano San José cuenta hoy con un Ciclo Básico o Común de dos divisiones de primer y segundo año, y un Ciclo Superior u Orientado de dos divisiones de tercero, cuarto, quinto y sexto año. La división primera corresponde a Informática y la segunda a Electromecánica. Al cabo de los seis años de cursado, los alumnos egresan como “Técnicos en Informática Profesional y Personal” y “Técnicos en Equipos e Instalaciones Electromecánicas”. Los alumnos de la escuela 2043 constituyen un grupo ricamente heterogéneo.
+                </p></div>
+                <div class="col-md-6 inst-img">
+                    <img src="img/parroquia.jpg" style="width: inherit;">
+                    <div> Parroquia María Auxiliadora</div>
+                </div>
+            </div>
+            
+            <hr class="my-5" >
+            
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-10">
+                            <h5 class="feature-title">Taller</h5>
+                            <p>La materia taller de 5to año, dictada por los profesores Eber Fior y Germán Fortunato, tiene como objetivo que los alumnos realicen un proyecto utilizando Arduino. Este proyecto debera ser elegido, montado y programado por los alumnos durante el transcurso del ciclo lectivo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-10">
+                            <h5 class="feature-title">Software III</h5>
+                            <p>En la materia Software III se tiene como objetivo el entendimiento de los lenguajes de programación CSS, HTML y JavaScript y la correcta aplicación del framework Bootstrap. La idea es que a lo largo del ciclo lectivo el alumno vaya adquiriendo los conocimientos y las herramientas necesarias para la programación de páginas web.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!--SEPARACION-->
+
+    <div class="fondo4" id="team">
+        <h2 class=display-4>¿QUIENES SOMOS?</h2>
+    </div>
+
+    <!--QUIENES SOMOS-->
+
+    <section class="team">
+        <div class="equipo container my-3 py-3 text-center">
+                    <div class="row mb-5">
+                        <div class="col">
+                            <h4 class="mt-3 h4">
+                                El proyecto fue realizado por dos estudiantes de la escuela técnica número 2043 para la materia taller.
+                            </h4>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 mx-auto">
+                            <div class="card" style="width: 16rem;">
+                                <img src="img/Jero.png" class="card-img-top">
+                                <div class="card-body">
+                                  <h4 class="h5">Jerónimo Delorenzi</h4>
+                                  <p class="card-text">Actualmente tiene 17 años y cursa 5to año de la escuela nro. 2043. Forma parte de la institución San José desde que tiene 6 años.</p>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mx-auto">
+                            <div class="card" style="width: 16rem;">
+                                <img src="img/eze.png" class="card-img-top">
+                                <div class="card-body">
+                                  <h4 class="h5">Ezequiel Rueda</h4>
+                                  <p class="card-text">Actualmente tiene 17 años y cursa 5to año de la escuela nro. 2043. Forma parte de la institución San José desde que tiene 5 años.</p>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--FOOTER-->
+        
+        <footer class="page-footer bg-dark">
+            <div class="bg" style="background-color: #407DDA;">
+                <div class="container">
+                    <div class="row py-4 d-flex align-items-center">
+                        <div class="col-md-12 text-center">
+                            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f text-white mr-4"></i></a>
+                            <a href="https://www.instagram.com/"><i class="fab fa-instagram text-white mr-4"></i></a>
+                            <a href="https://www.youtube.com/"><i class="fab fa-youtube text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="container text-center text-md-left mt-5">
+                <div class="row">
+                    
+                    
+                
+                    <div class="col-md-2 mx-auto mb-4 text-white">
+                        <h6 class="text-uppercase font-weight-bold">Referencias</h6>
+                        <hr class="bg mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px; background-color: #407DDA;">
+                    <ul class="list-unstyled">
+                        <li class="my-2"><a href="http://rogerbit.com/wprb/2018/11/guante-para-personas-no-videntes-con-audio-por-voz-prototipo-video-colaborativo/" style="color: #ffffff;">Proyecto de referencia</a></li>
+                        <li class="my-2"><a href="https://www.arduino.cc/" style="color: #ffffff;">Página de Arduino</a></li>
+                        <li class="my-2"><a href="https://sanjoserosario.com.ar/" style="color: #ffffff;">Página del colegio</a></li>
+                    </ul>
+                    </div>
+                    
+                    <div class="col-md-2 mx-auto mb-4 text-white">
+                        <h6 class="text-uppercase font-weight-bold">SECCIONES</h6>
+                        <hr class="bg mb-4 mt-0 d-inline-block mx-auto" style="width: 110px; height: 2px; background-color: #407DDA;">
+                        <ul class="list-unstyled">
+                            <li class="my-2"><a href="#" style="color: #ffffff;">Inicio</a></li>
+                            <li class="my-2"><a href="#proyecto" style="color: #ffffff;">Proyecto</a></li>
+                            <li class="my-2"><a href="#team" style="color: #ffffff;">¿Quienes somos?</a></li>
+                            <li class="my-2"><a href="#coleg" style="color: #ffffff;">Institucion</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 mx-auto mb-4 text-white">
+                        <h6 class="text-uppercase font-weight-bold">CONTACTO</h6>
+                        <hr class="bg mb-4 mt-0 d-inline-block mx-auto" style="width: 110px; height: 2px; background-color: #407DDA;">
+                        <ul class="list-unstyled">
+                            <li class="my-2"><i class="fas fa-home"></i> Pte. Roca 150</li>
+                            <li class="my-2"><i class="fas fa-envelope" ></i><a href="mailto:jerobeatle@gmail.com"style="color: #ffffff;"> Jerónimo</a></li>
+                            <li class="my-2"><i class="fas fa-envelope" ></i><a href="mailto:ezequielrueda2043@gmail.com" style="color: #ffffff;"> Ezequiel</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="footer-copyright text-center py-3" style="color: #ffffff; background-color: rgb(37, 37, 37);">
+                <p>&copy; Copyright Taller 5to año 2043</p>
+                <p>Diseñado por Jerónimo Delorenzi y Ezequiel Rueda</p>
+            </div>
+        </footer>
+    
+    <!--BOOSTRAP-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!--JS-->
+    <script src="index.js" defer></script>
+    <!--SCROLL-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/743ceab489.js" crossorigin="anonymous"></script>
+    </body>
+</html>
+

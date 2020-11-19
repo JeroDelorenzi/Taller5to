@@ -1,0 +1,204 @@
+//Librerias
+
+#include <SD.h> 
+#define SD_ChipSelectPin 10
+#include <TMRpcm.h>
+#include <SPI.h>
+
+//Declaracion sonidos 
+
+int SOL = 784;
+int SI = 988;
+int DO = 1046;
+int RE = 1174;
+int AUR = 9;
+
+//Declaracion sensores ultrasonicos
+
+int TRIG1 = 2;
+int ECO1 = 3;
+int TRIG2 = 4;
+int ECO2 = 5;
+int TRIG3 = 6;
+int ECO3 = 7;
+
+//Declaraciones analogicas
+
+int MOTOR = A0;
+int PULSADOR = A1;
+
+//Calculos
+
+int DUR1; // Duracion 1
+int DIS1; // Distancia 1
+int DUR2; // Duracion 2
+int DIS2; // Distancia 2
+int DUR3; // Duracion 3
+int DIS3; // Distancia 3
+int DUR4; // Duracion 4
+
+//Declaraciones para el cambio de estado
+
+int INICIO = 0; // cuando arranca arduino esta en 0
+int ESTADOAC = 0; // guarda estado actual
+int ESTADOAN = 0; // guarda estado anterior
+
+//
+
+TMRpcm tmrpcm;
+
+void setup(){
+
+  //Audio
+
+  tmrpcm.speakerPin = 9; // define como salida del sonido al pin 9
+  Serial.begin(9600);
+  if(!SD.begin(SD_ChipSelectPin)){
+    Serial.println("SD fail");
+    return;
+  }
+  tmrpcm.quality(1); // define la calidad
+  tmrpcm.setVolume(5); // define el volumen
+  tmrpcm.play("todos.wav"); // selecciona el audio a reproducir
+
+  //Pines
+
+  digitalWrite(PULSADOR, LOW); // define al PULSADOR como 0
+  pinMode(TRIG1, OUTPUT); // define al TRIG del sensor 1 como salida
+  pinMode(ECO1, INPUT); // define al ECO del sensor 1 como entrada
+  pinMode(TRIG2, OUTPUT); // define al TRIG del sensor 2 como salida
+  pinMode(ECO2, INPUT); // define al ECO del sensor 2 como entrada
+  pinMode(TRIG3, OUTPUT); // define al TRIG del sensor 3 como salida
+  pinMode(ECO3, INPUT); // define al ECO del sensor 3 como entrada
+  pinMode(AUR, OUTPUT); // define al AURICULAR del sensor 1 como salida
+  pinMode(MOTOR, OUTPUT); // define al MOTOR como salida
+  pinMode(PULSADOR, INPUT); // define al PULSADOR como entrada
+  Serial.begin(9600);
+  delay(1); // despues del delay comienza el void loop
+
+}
+
+void loop(){
+
+  //Cambio de modo
+  ESTADOAC = digitalRead(PULSADOR); // lee el estado del pulsador
+  if(ESTADOAC && ESTADOAN == 0){
+    INICIO = 1 - INICIO; //
+    delay(100); // evita el efecto rebote del boton
+  }
+  ESTADOAN = ESTADOAC; // resetea los estados
+
+  //Variables
+
+  int FRE1;
+  int DURV1;
+  int FRE2;
+  int DURV2;
+  int FRE3;
+  int DURV3;
+  int FRE4;
+
+  //Sensor 1
+
+  digitalWrite(TRIG1, HIGH); //envia pulso
+  delay(1);
+  digitalWrite(TRIG1, LOW);
+
+  DUR1 = pulseIn(ECO1, HIGH); //obtiene el tiempo transcurrido entre la emision del TRIG y la recepcion ECO
+  DIS1 = DUR1 / 58.2;
+  
+  Serial.println("DISTANCIA 1:");
+  Serial.println(DIS1);
+  delay(200);
+  
+  //Sensor 2
+
+  digitalWrite(TRIG2, HIGH); //envia pulso
+  delay(1);
+  digitalWrite(TRIG2, LOW);
+
+  DUR2 = pulseIn(ECO2, HIGH); //obtiene el tiempo transcurrido entre la emision del TRIG y la recepcion ECO
+  DIS2 = DUR2 / 58.2;
+  
+  Serial.println("DISTANCIA 2:");
+  Serial.println(DIS2);
+  delay(200);
+  
+  //Sensor 3
+
+  digitalWrite(TRIG3, HIGH); //envia pulso
+  delay(1);
+  digitalWrite(TRIG3, LOW);
+
+  DUR3 = pulseIn(ECO3, HIGH); //obtiene el tiempo transcurrido entre la emision del TRIG y la recepcion ECO
+  DIS3 = DUR3 / 58.2;
+  
+  Serial.println("DISTANCIA 3:");
+  Serial.println(DIS3);
+  delay(200);
+
+  if(INICIO == 1){
+
+   //Deteccion sensor 1
+    
+    if(DIS1 <=82 && DIS1 >= 0){
+      FRE1 = SOL; 
+      DURV1 = DIS1*10;
+      tone(AUR, FRE1, DURV1);
+      delay(DIS1*10);
+    }
+
+   //Deteccion sensor 2
+
+    if(DIS2 <= 100 && DIS2 >= 0){
+      FRE2 = SI;
+      DURV2 = DIS2*10;
+      tone(AUR, FRE2, DURV2);
+      delay(DIS2*10);
+    }
+
+
+   //Deteccion sensor 3
+
+    if(DIS3 >= 110 && DIS3 <= 300){
+      FRE3 = DO;
+      DURV3 = DIS3*10;
+      tone(AUR, FRE3, DURV3);
+      delay(DIS3*10);
+     }
+
+    if(DIS3 < 90){
+      FRE4 = RE;
+      DURV3 = DIS3*10;
+      tone(AUR, FRE4, DURV3);
+      delay(DIS3*10);
+    }
+   
+  }else{
+
+    //Motor sensor 1
+
+    if(DIS1 <=100 && DIS1 >= 0){
+      digitalWrite(MOTOR, HIGH);
+      delay(DIS1 * 10);
+      digitalWrite(MOTOR, LOW);
+    }
+
+    //Motor sensor 2
+    
+    if(DIS2 <=100 && DIS2 >= 0){
+      digitalWrite(MOTOR, HIGH);
+      delay(DIS2 * 10);
+      digitalWrite(MOTOR, LOW);
+    }
+
+    //Motor sensor 3
+
+    if(DIS3 >=110 && DIS3 <= 300){
+      digitalWrite(MOTOR, HIGH);
+      delay(DIS3 * 10);
+      digitalWrite(MOTOR, LOW);
+   } 
+    
+  }
+}

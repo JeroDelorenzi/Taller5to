@@ -1,0 +1,448 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif; 
+}
+
+/*NAVBAR*/
+.scroll-color {
+    background: #407DDA;
+    border-bottom: 1px solid #f4f4f4;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
+    transition: all 2s ease;
+}
+
+.scroll-color2{
+    opacity: 100%;
+    transition: all 1s ease;
+}
+
+
+.navbar-nav a{
+    font-size: 18px;
+    color: white;
+    justify-content: space-between;
+}
+
+.contacto{
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: .4s;
+    border-radius: 3px;
+}
+
+.navbar-nav a:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: .4s;
+    border-radius: 3px;
+}
+
+.navbar-brand{
+    font-size: 25px;
+    padding: 0 30px;
+    font-weight: bold;
+}
+
+
+/*CAROUSEL*/
+
+.carousel-item img{
+    width: 100%;
+    height: 100vh;
+}
+
+.carousel-caption{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-caption h1{
+    font-size: 500%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 10px #000;
+}
+
+.carousel-caption h3{
+    font-size: 200%;
+    font-weight: 500;
+    text-shadow: 1px 1px 10px #000;
+    padding-bottom: 1rem;
+}
+
+/*PRESENTACION*/
+
+.about i{
+    color: #407DDA;
+}
+
+.about h3{
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.about p{
+    font-size: 1rem;
+    line-height: 1.7rem;
+}
+
+.about{
+    position: relative;
+    background-color: #fafafa;
+}
+
+.list-unstyled{
+    font-size: 15px;
+}
+
+/*PROYECTO*/
+
+.proyecto{
+    padding: 3rem;
+    margin-top: 1rem;
+}
+
+.proyecto i{
+    margin: 0 auto;
+    color: #407DDA;
+}
+
+.proyecto img{
+    box-shadow: 5px 5px 10px #9e9e9e;
+}
+
+.proyecto button{
+    color: #000;
+}
+
+
+
+/*ARDUINO*/
+
+.arduino{
+    background-color: #fafafa;
+    padding: 3rem;
+    margin-top: 1rem;
+}
+
+.arduino i{
+    margin: 0 auto;
+    color: #407DDA;
+}
+
+.arduino .feature-block{
+    text-align: center;
+}
+
+.arduino .feature-block h3{
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.arduino .imagen{
+
+    padding-top: 10rem;
+    margin-bottom: 6rem;
+}
+
+.arduino .feature-block p{ 
+    font-size: 1rem;
+    line-height: 1.7rem;
+}
+
+.centrado2 img{
+    box-shadow: 5px 5px 10px #9e9e9e;
+}
+/*INSTITUCION*/
+
+.coleg{
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.inst-img div{
+    width: inherit;
+	color:#fff;
+	background-color:#000;
+	opacity:0.3;
+}
+/*QUIENES SOMOS*/
+
+.card{
+    margin: auto;
+}
+
+/* SEPARACION 1 */
+.fondo1 {
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url(img/img2.jpg);
+    height: 25vh;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 1px 1px 10px #000;
+ }
+
+ .fondo2 {
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url(img/img1.jpg);
+    height: 25vh;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 1px 1px 10px #000;
+ }
+
+ .fondo3 {
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url(img/Colegi.jpg);
+    height: 25vh;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 1px 1px 10px #000;
+ }
+
+ .fondo4 {
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url(img/quienessomos.png) ;
+    height: 25vh;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 1px 1px 10px #000;
+ }
+
+.icons{
+    display:block;
+    }
+
+/*TEAM*/
+
+.team img{
+    margin-top: -50px;
+}
+
+.team i{
+    font-size: 26px;
+    color:#407DDA;
+}
+
+.team .card{
+    box-shadow: 5px 5px 15px #407DDA;
+    transition: all 0.3s ease-in;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.team .card:hover{
+    background-color: #407DDA;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 5px 5px 10px #9e9e9e;
+}
+
+.team .card:hover h3, .team .card:hover i{
+    color: #fff;
+}
+
+@media (max-width: 1000px){
+    .centrado1{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .centrado2{
+        margin-right: 1rem;
+    }
+    .carousel-inner img{
+        width: 100%;
+        height: 50vh;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .equipo{
+        align-items: center;
+    }
+
+    .navbar{
+        background: #407DDA;
+    }
+
+    .arduino .imagen{
+        padding-top: 20rem;
+        margin-bottom: 6rem;
+    }
+
+    .card{
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 766px){
+    .equipo{
+    align-items: center;
+    }
+
+
+    .proyecto button{
+            display: flex;
+        margin-left: 95px;
+    }
+}
+@media (max-width: 700px){
+    .carousel-inner img{
+        width: 100%;
+        height: 40vh;
+        overflow: hidden;
+        position: relative;
+    }   
+    .arduino .imagen{
+        padding-top: 4rem;
+        margin-bottom: 6rem;
+    }
+    .equipo{
+        align-items: center;
+    }
+    .parrafo{
+        margin-top: 1rem;
+    }
+    .proyecto button{
+        display: flex;
+        margin-left: 95px;
+    }
+    .card{
+        margin-top: 3rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px){
+
+    .carousel-inner img{
+        width: 100%;
+        height: 40vh;
+        overflow: hidden;
+        position: relative;
+    }
+    .carousel-caption{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .carousel-caption h1{
+        font-size: 250%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 10px #000;
+    }
+    
+    .carousel-caption h3{
+        font-size: 100%;
+        font-weight: 250;
+        text-shadow: 1px 1px 10px #000;
+        padding-bottom: 1rem;
+    
+    }
+    .parrafo{
+        margin-top: 1rem;
+    }
+    .carousel-inner button{
+        margin: -40px
+    }
+    
+    .proyecto button{
+       margin-left: 20px;
+    }
+    
+    .card{
+        margin-top: 3rem;
+    }
+    
+    .box{
+        padding: 40px 60px;
+    }
+    .box1{
+        padding: 35px 60px;
+    }
+    .box h2{
+        font-size: 3rem;
+    }
+    .box1 h2{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 400px){
+    .navbar{
+        background: #407DDA;
+    }
+
+    .carousel-inner img{
+        width: 100%;
+        height: 40vh;
+        overflow: hidden;
+        position: relative;
+    }
+    .carousel-caption{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .carousel-caption h1{
+        margin-top: -30px;
+        font-size: 250%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 10px #000;
+    }
+
+
+    .proyecto button{
+       margin-left: 20px;
+    }
+
+    .arduino .imagen{
+        padding-top: 6rem;
+        margin-bottom: 6rem;
+    }
+
+    .card{
+        margin-top: 3rem;
+    }
+
+    .box{
+        padding: 40px 60px;
+    }
+    .box1{
+        padding: 35px 60px;
+    }
+    .box h2{
+        font-size: 2.5rem;
+    }
+    .box1 h2{
+        font-size: 2.5rem;
+    }
+}
